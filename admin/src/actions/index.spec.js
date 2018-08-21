@@ -1,45 +1,35 @@
 import * as types from '../constants/ActionTypes'
 import * as actions from './index'
 
-describe('shop actions', () => {
+describe('category actions', () => {
   it('addCategory should create ADD_CATEGORY action', () => {
     expect(actions.addCategory('Use Redux')).toEqual({
-      type: types.ADD_TODO,
+      type: types.ADD_CATEGORY,
       text: 'Use Redux'
     })
   })
 
-  it('deleteTodo should create DELETE_TODO action', () => {
-    expect(actions.deleteTodo(1)).toEqual({
+  it('deleteCategory should create DELETE_CATEGORY action', () => {
+    expect(actions.deleteCategory(1)).toEqual({
       type: types.DELETE_TODO,
       id: 1
     })
   })
 
-  it('editTodo should create EDIT_TODO action', () => {
-    expect(actions.editTodo(1, 'Use Redux everywhere')).toEqual({
-      type: types.EDIT_TODO,
+  it('editCategory should create EDIT_Category action', () => {
+    expect(actions.editCategory(1, 'Use Redux everywhere')).toEqual({
+      type: types.EDIT_CATEGORY,
       id: 1,
       text: 'Use Redux everywhere'
     })
   })
 
-  it('completeTodo should create COMPLETE_TODO action', () => {
-    expect(actions.completeTodo(1)).toEqual({
-      type: types.COMPLETE_TODO,
-      id: 1
+  it('getAllCategories should create GET_ALL_CATEGORIES action', () => {
+    expect(actions.getAllCategories()).toEqual({
+      type: types.GET_ALL_CATEGORIES
     })
   })
 
-  it('completeAll should create COMPLETE_ALL action', () => {
-    expect(actions.completeAllTodos()).toEqual({
-      type: types.COMPLETE_ALL_TODOS
-    })
-  })
 
-  it('clearCompleted should create CLEAR_COMPLETED action', () => {
-    expect(actions.clearCompleted()).toEqual({
-      type: types.CLEAR_COMPLETED
-    })
-  })
+ 
 })
