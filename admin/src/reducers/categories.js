@@ -35,7 +35,7 @@ import {
             category
         )
     case GET_ALL_CATEGORIES:
-    return action.categoriess.map(category => category.id)
+    return action.categories.map(category => category.id)
     }
   }
   
