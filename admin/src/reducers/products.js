@@ -7,7 +7,7 @@ import {
   
   const initialState = [
     {
-      text: 'Use Redux',
+      text: '',
       id: 0
     }
   ]
